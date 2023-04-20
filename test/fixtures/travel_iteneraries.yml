@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  traveler: MyString
+  mode: MyString
+  provider: MyString
+  departure: 2023-04-19 21:04:52
+  arrival: 2023-04-19 21:04:52
+
+two:
+  traveler: MyString
+  mode: MyString
+  provider: MyString
+  departure: 2023-04-19 21:04:52
+  arrival: 2023-04-19 21:04:52

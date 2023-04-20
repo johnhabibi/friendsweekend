@@ -1,0 +1,10 @@
+
+<ul>
+  <% @travel_iteneraries.each do |itn| %>
+    <li> 
+        <a href="/travel_iteneraries/<%= itn.id %>">
+            <%= itn.traveler %> scheduled to arrive in <%= itn.arrival_code %> at <%= itn.arrival.strftime("%l:%M %Z") %>
+        </a>
+    </li>
+    <% end %>
+</ul>

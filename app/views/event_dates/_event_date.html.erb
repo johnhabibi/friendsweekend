@@ -1,0 +1,10 @@
+<div id="<%= dom_id event_date %>">
+
+  <% seconds_until_target_time = event_date.date.to_i - Time.now.to_i %>
+
+  <%= content_tag(:h1, "", data: {
+    controller: "countdown",
+    countdown_target: "countdown",
+    seconds_until_end_value: seconds_until_target_time
+  }) %>
+</div>

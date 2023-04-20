@@ -1,0 +1,2 @@
+class TravelItenerary < ApplicationRecord
+end
