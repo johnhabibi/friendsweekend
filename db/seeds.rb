@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+event_dates = EventDate.create(date: "2023-06-03 11:10:00", location: "Camp Hill, Pennsylvania")
+travel_iteneraries = TravelItenerary.create(traveler: "John Habibi", provider: "Southwest Airlines", departure: "2023-06-03 07:00:00", arrival: "2023-06-03 11:10:00", identifier: "360", arrival_code: "PHL")
