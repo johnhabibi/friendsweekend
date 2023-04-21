@@ -27,10 +27,15 @@ export default class extends Controller {
     const secondsPerHour = 3600;
     const secondsPerMinute = 60;
 
-    const days = Math.floor(secondsRemaining / secondsPerDay);
-    const hours = Math.floor((secondsRemaining % secondsPerDay) / secondsPerHour);
-    const minutes = Math.floor((secondsRemaining % secondsPerHour) / secondsPerMinute);
-    const seconds = Math.floor(secondsRemaining % secondsPerMinute);
+    function zeroPad(number) {
+      number = ("00"+number).slice(-2);
+      return number
+    }
+
+    const days = zeroPad(Math.floor(secondsRemaining / secondsPerDay));
+    const hours = zeroPad(Math.floor((secondsRemaining % secondsPerDay) / secondsPerHour));
+    const minutes = zeroPad(Math.floor((secondsRemaining % secondsPerHour) / secondsPerMinute));
+    const seconds = zeroPad(Math.floor(secondsRemaining % secondsPerMinute));
 
     this.countdownTarget.innerHTML = `${days}${hours}${minutes}${seconds}`
   }
