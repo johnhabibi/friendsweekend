@@ -2195,3 +2195,109 @@ Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 5.7ms | Allocations: 622
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mTravelItenerary Create (0.4ms)[0m  [1m[32mINSERT INTO "travel_iteneraries" ("traveler", "provider", "departure", "arrival", "created_at", "updated_at", "identifier", "arrival_code") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["traveler", "John Habibi"], ["provider", "Southwest Airlines"], ["departure", "2023-06-03 06:00:00"], ["arrival", "2023-06-03 10:10:00"], ["created_at", "2023-04-20 11:45:54.756775"], ["updated_at", "2023-04-20 11:45:54.756775"], ["identifier", "360"], ["arrival_code", "PHL"]]
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2023-04-24 15:19:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventDatesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering event_dates/index.html.erb within layouts/application
+  [1m[36mEventDate Load (1.6ms)[0m  [1m[34mSELECT "event_dates".* FROM "event_dates"[0m
+  ↳ app/views/event_dates/index.html.erb:2
+  Rendered event_dates/_event_date.html.erb (Duration: 1.0ms | Allocations: 410)
+  Rendered event_dates/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 6051)
+  Rendered layout layouts/application.html.erb (Duration: 89.6ms | Allocations: 42678)
+Completed 200 OK in 104ms (Views: 86.9ms | ActiveRecord: 6.9ms | Allocations: 46565)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-24 15:22:43 -0500
+Processing by EventDatesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering event_dates/index.html.erb within layouts/application
+  [1m[36mEventDate Load (0.2ms)[0m  [1m[34mSELECT "event_dates".* FROM "event_dates"[0m
+  ↳ app/views/event_dates/index.html.erb:2
+  Rendered event_dates/_event_date.html.erb (Duration: 0.2ms | Allocations: 80)
+  Rendered event_dates/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 755)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3286)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 3564)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-24 15:28:29 -0500
+Processing by EventDatesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering event_dates/index.html.erb within layouts/application
+  [1m[36mEventDate Load (0.5ms)[0m  [1m[34mSELECT "event_dates".* FROM "event_dates"[0m
+  ↳ app/views/event_dates/index.html.erb:2
+  Rendered event_dates/_event_date.html.erb (Duration: 0.2ms | Allocations: 80)
+  Rendered event_dates/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 3557)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 6119)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 5.2ms | Allocations: 6397)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-24 15:31:34 -0500
+Processing by EventDatesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering event_dates/index.html.erb within layouts/application
+  [1m[36mEventDate Load (0.2ms)[0m  [1m[34mSELECT "event_dates".* FROM "event_dates"[0m
+  ↳ app/views/event_dates/index.html.erb:2
+  Rendered event_dates/_event_date.html.erb (Duration: 0.7ms | Allocations: 278)
+  Rendered event_dates/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1204)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4011)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 4793)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-24 15:32:09 -0500
+Processing by EventDatesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering event_dates/index.html.erb within layouts/application
+  [1m[36mEventDate Load (0.2ms)[0m  [1m[34mSELECT "event_dates".* FROM "event_dates"[0m
+  ↳ app/views/event_dates/index.html.erb:2
+  Rendered event_dates/_event_date.html.erb (Duration: 18.6ms | Allocations: 11599)
+  Rendered event_dates/index.html.erb within layouts/application (Duration: 21.2ms | Allocations: 12525)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 12613)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms | Allocations: 13396)
+
+
+  
+ActionView::Template::Error (undefined method `value' for #<EventDate id: 8, date: "2023-06-03 11:10:00.000000000 -0400", location: "Camp Hill, Pennsylvania", created_at: "2023-04-20 16:17:46.893074000 -0400", updated_at: "2023-04-20 16:17:46.893074000 -0400">):
+     8:     seconds_until_end_value: seconds_until_target_time
+     9:   }) %>
+    10: 
+    11:   <p><%= event_date.value %></p>
+    12: </div>
+  
+app/views/event_dates/_event_date.html.erb:11
+app/views/event_dates/index.html.erb:3
+app/views/event_dates/index.html.erb:2
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (2.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "travel_iteneraries" DISABLE TRIGGER ALL;ALTER TABLE "event_dates" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (10.8ms)[0m  [1m[35mTRUNCATE TABLE "travel_iteneraries", "event_dates"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "travel_iteneraries" ENABLE TRIGGER ALL;ALTER TABLE "event_dates" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEventDate Create (7.3ms)[0m  [1m[32mINSERT INTO "event_dates" ("date", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2023-06-03 17:45:00"], ["location", "Camp Hill, Pennsylvania"], ["created_at", "2023-04-24 15:32:37.254923"], ["updated_at", "2023-04-24 15:32:37.254923"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTravelItenerary Create (0.8ms)[0m  [1m[32mINSERT INTO "travel_iteneraries" ("traveler", "provider", "departure", "arrival", "created_at", "updated_at", "identifier", "arrival_code") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["traveler", "John Habibi"], ["provider", "Southwest Airlines"], ["departure", "2023-06-03 06:00:00"], ["arrival", "2023-06-03 10:10:00"], ["created_at", "2023-04-24 15:32:37.281677"], ["updated_at", "2023-04-24 15:32:37.281677"], ["identifier", "360"], ["arrival_code", "PHL"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2023-04-24 15:32:54 -0500
+Processing by EventDatesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering event_dates/index.html.erb within layouts/application
+  [1m[36mEventDate Load (0.4ms)[0m  [1m[34mSELECT "event_dates".* FROM "event_dates"[0m
+  ↳ app/views/event_dates/index.html.erb:2
+  Rendered event_dates/_event_date.html.erb (Duration: 0.7ms | Allocations: 254)
+  Rendered event_dates/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1176)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4001)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.4ms | Allocations: 4784)
+
+
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE DATABASE "friends_weekend_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "friends_weekend_test" ENCODING = 'unicode'[0m
