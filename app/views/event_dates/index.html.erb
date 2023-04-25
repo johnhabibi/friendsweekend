@@ -1,4 +1,13 @@
 <div id="event_dates">
+  <div>
+    <% if friend_signed_in? %> 
+    <div> Welcome <%= current_friend.email %> </div> 
+      <%= button_to "Sign out", destroy_friend_session_path, method: :delete %> 
+    <% else %>
+      <%= button_to "Sign in", new_friend_session_path %> 
+    <% end %>
+  </div>
+  
   <% @event_dates.each do |event_date| %>
     <%= render event_date %>
   <% end %>

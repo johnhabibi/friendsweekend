@@ -1,4 +1,7 @@
 #event_dates {
+    background-color: #000000;  
+    top: 0;
+    left: 0;
     overflow: hidden;
     position: absolute;
     width: 100%;

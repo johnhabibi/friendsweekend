@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :friends
   root "event_dates#index"
   resources :event_dates
 
